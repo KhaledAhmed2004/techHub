@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut();
+  };
+  console.log(user);
   const navLinks = (
     <>
       <li className="navLink">
@@ -63,13 +70,52 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="flex gap-4 px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
-        <Link
-          to="/login"
-          className="btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
-        >
-          Login
-        </Link>
+      <div className="navbar-end gap-2">
+        {user ? (
+          // <Link
+          //   onClick={handleLogout}
+          //   to="/login"
+          //   className="px-[22.5px] btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
+          // >
+          //   sign Out
+          // </Link>
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
+            >
+              <li>
+                <a className="justify-between">{user?.displayName}</a>
+              </li>
+              <li>
+                <a className="w-ful break-words">{user?.email}</a>
+              </li>
+              <li>
+                <a onClick={handleLogout}>Logout</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <>
+            <Link
+              to="/login"
+              className="px-[22.5px] btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signUp"
+              className="btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
+            >
+              Sign Up
+            </Link>
+          </>
+        )}
       </div>
     </nav>
   );

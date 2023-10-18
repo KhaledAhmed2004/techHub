@@ -49,6 +49,9 @@ const Login = () => {
                 <BsGoogle className="text-xl"></BsGoogle>
               </Link>
             </div>
+            <p>
+              Don't have any Account <Link className="text-blue-800 font-medium underline decoration-2 underline-offset-2" to="/signUp">SignUp</Link>
+            </p>
           </form>
         </div>
       </div>
