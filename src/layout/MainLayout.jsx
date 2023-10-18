@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="max-w-[1500px] mx-auto">
+      <Toaster />
       <Navbar></Navbar>
       <Outlet></Outlet>
     </div>

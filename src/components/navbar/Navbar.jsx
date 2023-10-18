@@ -8,6 +8,7 @@ const Navbar = () => {
     logOut();
   };
   console.log(user);
+  console.log(user?.photoURL);
   const navLinks = (
     <>
       <li className="navLink">
@@ -31,15 +32,19 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li className="navLink">
-        <NavLink to="/yes">Yes</NavLink>
-      </li>
-      <li className="">
-        <NavLink to="/yes">Yes</NavLink>
+        <NavLink
+          to="/myCart"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "underline" : ""
+          }
+        >
+          My Cart
+        </NavLink>
       </li>
     </>
   );
   return (
-    <nav className="navbar bg-base-100 shadow-md">
+    <nav className="navbar bg-base-100 shadow-md rounded-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -65,6 +70,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
+        <img className="h-10 mr-2" src="https://i.ibb.co/yg0sxnN/logo.png" />
         <a className="normal-case text-xl">TechHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -82,7 +88,15 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={user?.photoURL} />
+                {/* <img src="https://i.ibb.co/vcQZhpc/1921098.png" /> */}
+                {/* <img src={user?.photoURL} /> */}
+                <img
+                  src={
+                    user?.photoURL
+                      ? user?.photoURL
+                      : "https://i.ibb.co/vcQZhpc/1921098.png"
+                  }
+                />
               </div>
             </label>
             <ul
@@ -108,12 +122,12 @@ const Navbar = () => {
             >
               Login
             </Link>
-            <Link
+            {/* <Link
               to="/signUp"
               className="btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
             >
               Sign Up
-            </Link>
+            </Link> */}
           </>
         )}
       </div>
