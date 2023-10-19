@@ -15,7 +15,11 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "underline" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline font-medium decoration-2"
+              : "font-medium"
           }
         >
           Home
@@ -25,7 +29,11 @@ const Navbar = () => {
         <NavLink
           to="/addProduct"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "underline" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline font-medium decoration-2"
+              : "font-medium"
           }
         >
           Add Product
@@ -35,7 +43,11 @@ const Navbar = () => {
         <NavLink
           to="/myCart"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "underline" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline font-medium decoration-2"
+              : "font-medium"
           }
         >
           My Cart
@@ -71,7 +83,7 @@ const Navbar = () => {
           </ul>
         </div>
         <img className="h-10 mr-2" src="https://i.ibb.co/yg0sxnN/logo.png" />
-        <a className="normal-case text-xl">TechHub</a>
+        <a className="normal-case text-xl font-medium">TechHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex gap-4 px-1">{navLinks}</ul>

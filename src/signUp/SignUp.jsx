@@ -51,7 +51,13 @@ const SignUp = () => {
     <div>
       <div className="hero min-h-[calc(100vh-64px)] bg-base-200">
         <div className="w-full md:w-[80%] hero-content flex-col lg:flex-row-reverse">
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div
+            style={{
+              boxShadow:
+                "15px 15px 20px rgba(0, 0, 0, 0.3),-15px -15px 20px #fffb",
+            }}
+            className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100"
+          >
             <form onSubmit={handleSubmit} className="card-body ">
               <h1 className="text-4xl text-center font-bold mb-5">Sign Up</h1>
               <div className="form-control">
@@ -59,6 +65,10 @@ const SignUp = () => {
                   <span className="label-text">Name</span>
                 </label>
                 <input
+                  style={{
+                    boxShadow:
+                      "inset 2px 2px 9px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff",
+                  }}
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -71,6 +81,10 @@ const SignUp = () => {
                   <span className="label-text">Photo Url</span>
                 </label>
                 <input
+                  style={{
+                    boxShadow:
+                      "inset 2px 2px 9px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff",
+                  }}
                   type="text"
                   name="photoUrl"
                   placeholder="Photo Url"
@@ -82,6 +96,10 @@ const SignUp = () => {
                   <span className="label-text">Email</span>
                 </label>
                 <input
+                  style={{
+                    boxShadow:
+                      "inset 2px 2px 9px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff",
+                  }}
                   type="email"
                   name="email"
                   placeholder="email"
@@ -95,6 +113,10 @@ const SignUp = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
+                  style={{
+                    boxShadow:
+                      "inset 2px 2px 9px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff",
+                  }}
                   type="password"
                   name="password"
                   placeholder="password"
@@ -104,12 +126,20 @@ const SignUp = () => {
               </div>
               <div className="form-control mt-6">
                 <button
+                  style={{
+                    boxShadow:
+                      " 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff",
+                  }}
                   type="submit"
                   className="btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
                 >
                   Sign Up
                 </button>
                 <Link
+                  style={{
+                    boxShadow:
+                      " 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff",
+                  }}
                   onClick={googleLogin}
                   className="btn mt-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
                 >

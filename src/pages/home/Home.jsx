@@ -1,7 +1,11 @@
+import Hero from "./hero/Hero";
+import OurBrand from "./ourBrand/OurBrand";
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Hero></Hero>
+      <OurBrand></OurBrand>
     </div>
   );
 };
