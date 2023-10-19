@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "brandName": "Samsung",
+    "imageUrl": "https://i.pinimg.com/564x/c8/65/65/c86565a7d02bc906398f34e2da352822.jpg"
+  },
+  {
+    "id": 2,
+    "brandName": "Apple",
+    "imageUrl": "https://i.ibb.co/CWL2BDx/d88f14885bbbf3159344fb34b464f8b7.jpg"
+  },
+  {
+    "id": 3,
+    "brandName": "Nokia",
+    "imageUrl": "https://i.pinimg.com/564x/8c/4f/97/8c4f97c14c5913d976a77f7ee6453318.jpg"
+  },
+  {
+    "id": 4,
+    "brandName": "Xiaomi",
+    "imageUrl": "https://i.pinimg.com/564x/83/ed/14/83ed148d880fcc897ac9bd37759a553a.jpg"
+  },
+  {
+    "id": 5,
+    "brandName": "Sony",
+    "imageUrl": "https://i.pinimg.com/564x/33/11/47/331147faf6c9593d150e5e3f63358b77.jpg"
+  },
+  {
+    "id": 6,
+    "brandName": "Vivo",
+    "imageUrl": "https://i.pinimg.com/564x/50/23/53/502353f7649157a2cc754d6376fb809c.jpg"
+  }
+]

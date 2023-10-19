@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "authorName": "John Doe",
+    "review": "Great shop! I found the latest gadgets at competitive prices. Fast shipping and excellent customer service.",
+    "rating": 5,
+    "authImg": "https://i.ibb.co/yqtJd3T/pexels-reafon-gates-3221005.jpg"
+  },
+  {
+    "id": 2,
+    "authorName": "Alice Smith",
+    "review": "Impressive selection of tech products. The website is user-friendly, and I received my order in perfect condition.",
+    "rating": 4,
+    "authImg": "https://i.ibb.co/pKSbh60/pexels-spencer-selover-428328-1.jpg"
+  },
+  {
+    "id": 3,
+    "authorName": "Bob Johnson",
+    "review": "I'm a tech enthusiast, and this shop is my go-to place. Fantastic range of products and prompt delivery every time.",
+    "rating": 4.5,
+    "authImg": "https://i.ibb.co/L8PGYxm/man-in-tailored-suit.jpg"
+  }
+]
