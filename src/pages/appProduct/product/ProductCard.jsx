@@ -1,7 +1,9 @@
 import { BiSolidPencil } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-const ProductCard = () => {
+const ProductCard = ({ productData }) => {
+  const { brandName, name, price, shortDescription } = productData;
+  console.log(name);
   return (
     <div className="relative mx-auto mb-10 flex flex-col text-gray-700 bg-white w-96 rounded-xl bg-clip-border">
       <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
@@ -14,14 +16,14 @@ const ProductCard = () => {
         <div className="flex items-center justify-between mb-2">
           <div className="flex flex-col">
             <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
-              Apple AirPods
+              {brandName} {name}
             </p>
             <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
               Phone
             </p>
           </div>
           <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
-            $95.00
+            {price}$
           </p>
         </div>
         <div className="rating">
@@ -53,8 +55,7 @@ const ProductCard = () => {
           />
         </div>
         <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
-          With plenty of talk and listen time, voice-activated Siri access, and
-          an available wireless charging case.
+          {shortDescription}
         </p>
       </div>
       <div className="p-6 pt-0">

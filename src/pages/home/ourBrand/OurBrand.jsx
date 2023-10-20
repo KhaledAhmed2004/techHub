@@ -4,10 +4,13 @@ import BrandCard from "./BrandCard";
 const OurBrand = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("homePage.json")
+    fetch(
+      "https://technology-and-electronics-server-5yeidzl2t.vercel.app/brands"
+    )
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
   return (
     <div className="p-14">
       <h2 className="text-5xl font-bold text-center mb-8">
@@ -15,7 +18,7 @@ const OurBrand = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {data.map((brandData) => (
-          <BrandCard key={brandData.id} brandData={brandData}></BrandCard>
+          <BrandCard key={brandData._id} brandData={brandData}></BrandCard>
         ))}
       </div>
     </div>

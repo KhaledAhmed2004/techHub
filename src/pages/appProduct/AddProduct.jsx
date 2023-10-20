@@ -1,6 +1,41 @@
+import toast from "react-hot-toast";
+
 const AddProduct = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const image = form.image.value;
+    const name = form.name.value;
+    const brandName = form.brandName.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const shortDescription = form.shortDescription.value;
+    const rating = form.rating.value;
+    const product = {
+      image,
+      name,
+      brandName,
+      type,
+      price,
+      shortDescription,
+      rating,
+    };
+    console.log("product", product);
+    fetch("http://localhost:5000/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => {
+        toast.success("Successfully add the product.");
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  };
   return (
-    <div>
+    <>
       <div className="hero min-h-[calc(100vh-64px)] bg-base-200">
         <div className="w-full md:w-[80%] hero-content flex-col lg:flex-row-reverse">
           <div
@@ -10,7 +45,7 @@ const AddProduct = () => {
             }}
             className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100"
           >
-            <form className="card-body ">
+            <form onSubmit={handleSubmit} className="card-body ">
               <h1 className="text-4xl text-center font-bold mb-5">
                 Product Form
               </h1>
@@ -143,7 +178,7 @@ const AddProduct = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

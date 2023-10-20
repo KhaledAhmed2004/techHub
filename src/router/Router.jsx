@@ -6,6 +6,8 @@ import Login from "../pages/login/Login";
 import SignUp from "../signUp/SignUp";
 import AddProduct from "../pages/appProduct/AddProduct";
 import PrivetRouter from "./PrivetRouter";
+// import Brand from "../pages/brand/BrandPage";
+import OurBrand from "../pages/home/ourBrand/OurBrand";
 import Brand from "../pages/brand/Brand";
 
 const Router = createBrowserRouter([
@@ -37,9 +39,14 @@ const Router = createBrowserRouter([
       {
         path: "/myCart",
       },
+      // {
+      //   path: "/id/:id",
+      //   element: <Brand></Brand>,
+      //   loader: ({ params } = console.log(params)),
+      // },
       {
-        path: "/brand",
-        element: <Brand></Brand>,
+        path: "/:brand",
+        element: <Brand />,
       },
     ],
   },

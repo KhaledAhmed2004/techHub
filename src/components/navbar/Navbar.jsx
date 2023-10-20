@@ -7,8 +7,7 @@ const Navbar = () => {
   const handleLogout = () => {
     logOut();
   };
-  // console.log(user);
-  // console.log(user?.photoURL);
+
   const navLinks = (
     <>
       <li className="navLink">
