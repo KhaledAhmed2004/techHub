@@ -46,7 +46,7 @@ const Router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            " https://technology-and-electronics-server-pzmnao612.vercel.app/cart"
+            " https://technology-and-electronics-server-ntgl4njvl.vercel.app/cart"
           ),
       },
       {
@@ -70,7 +70,7 @@ const Router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            ` https://technology-and-electronics-server-pzmnao612.vercel.app/update/${params._id}`
+            ` https://technology-and-electronics-server-ntgl4njvl.vercel.app/update/${params._id}`
           ),
       },
     ],

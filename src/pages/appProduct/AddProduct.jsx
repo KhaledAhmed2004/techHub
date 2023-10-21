@@ -22,7 +22,7 @@ const AddProduct = () => {
     };
     console.log("product", product);
     fetch(
-      " https://technology-and-electronics-server-pzmnao612.vercel.app/products",
+      " https://technology-and-electronics-server-ntgl4njvl.vercel.app/products",
       {
         method: "POST",
         headers: {

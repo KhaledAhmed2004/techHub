@@ -25,7 +25,7 @@ const Update = () => {
     };
     console.log("product", product);
     fetch(
-      ` https://technology-and-electronics-server-pzmnao612.vercel.app/update/${data._id}`,
+      ` https://technology-and-electronics-server-ntgl4njvl.vercel.app/update/${data._id}`,
       {
         method: "PUT",
         headers: {
