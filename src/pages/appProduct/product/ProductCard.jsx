@@ -2,15 +2,12 @@ import { BiSolidPencil } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ productData }) => {
-  const { brandName, name, price, shortDescription } = productData;
-  console.log(name);
+  const { brandName, name, price, shortDescription, image, _id } = productData;
+
   return (
     <div className="relative mx-auto mb-10 flex flex-col text-gray-700 bg-white w-96 rounded-xl bg-clip-border">
       <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
-        <img
-          src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
-          className="object-cover w-full h-full"
-        />
+        <img src={image} className="object-cover w-full h-full" />
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
@@ -60,13 +57,13 @@ const ProductCard = ({ productData }) => {
       </div>
       <div className="p-6 pt-0">
         <Link
-          to="/login"
+          to={`/product/${_id}`}
           className="w-full px-[22.5px] btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
         >
           Details
         </Link>
         <Link
-          to="/login"
+          to={`/update/${_id}`}
           className="w-full px-[22.5px] btn bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold hover:drop-shadow-xl hover:scale-105 transition-all	duration-300"
         >
           Update<BiSolidPencil></BiSolidPencil>

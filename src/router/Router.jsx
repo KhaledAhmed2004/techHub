@@ -6,9 +6,10 @@ import Login from "../pages/login/Login";
 import SignUp from "../signUp/SignUp";
 import AddProduct from "../pages/appProduct/AddProduct";
 import PrivetRouter from "./PrivetRouter";
-// import Brand from "../pages/brand/BrandPage";
-import OurBrand from "../pages/home/ourBrand/OurBrand";
 import Brand from "../pages/brand/Brand";
+import DetilesCard from "../pages/appProduct/product/productDetiles/DetilesCard";
+import Update from "../pages/update/Update";
+import MyCart from "../pages/mycart/MyCart";
 
 const Router = createBrowserRouter([
   {
@@ -38,15 +39,39 @@ const Router = createBrowserRouter([
       },
       {
         path: "/myCart",
+        element: (
+          <PrivetRouter>
+            <MyCart></MyCart>
+          </PrivetRouter>
+        ),
+        loader: () =>
+          fetch(
+            " https://technology-and-electronics-server-pzmnao612.vercel.app/cart"
+          ),
       },
-      // {
-      //   path: "/id/:id",
-      //   element: <Brand></Brand>,
-      //   loader: ({ params } = console.log(params)),
-      // },
       {
         path: "/:brand",
         element: <Brand />,
+      },
+      {
+        path: "/product/:_id",
+        element: (
+          <PrivetRouter>
+            <DetilesCard></DetilesCard>
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/update/:_id",
+        element: (
+          <PrivetRouter>
+            <Update></Update>
+          </PrivetRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            ` https://technology-and-electronics-server-pzmnao612.vercel.app/update/${params._id}`
+          ),
       },
     ],
   },

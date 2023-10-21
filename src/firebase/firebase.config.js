@@ -1,13 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+// console.log(import.meta.env.VITE_SOME_KEY);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDt54sCYpP7mFBwtPAubHv_lv-AuHDrmu8",
-  authDomain: "technology-and-electroni-ebb95.firebaseapp.com",
-  projectId: "technology-and-electroni-ebb95",
-  storageBucket: "technology-and-electroni-ebb95.appspot.com",
-  messagingSenderId: "1068226899879",
-  appId: "1:1068226899879:web:f193b3aad3e45848ae9082",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 const app = initializeApp(firebaseConfig);

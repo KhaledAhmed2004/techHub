@@ -5,7 +5,7 @@ const OurBrand = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(
-      "https://technology-and-electronics-server-5yeidzl2t.vercel.app/brands"
+      " https://technology-and-electronics-server-pzmnao612.vercel.app/brands"
     )
       .then((res) => res.json())
       .then((data) => setData(data));
@@ -17,7 +17,7 @@ const OurBrand = () => {
         Our <span className="text-orange-700">Brands</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        {data.map((brandData) => (
+        {data?.map((brandData) => (
           <BrandCard key={brandData._id} brandData={brandData}></BrandCard>
         ))}
       </div>

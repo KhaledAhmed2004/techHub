@@ -1,8 +1,7 @@
-# React + Vite
+# TechHub is a brand based web site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- It's have a scrolling animation
+- It's have hover animation also
+- Email/Gmail 2 auth system are implement in this
+- Full web site data is from MongoDB
+- It show profile after login

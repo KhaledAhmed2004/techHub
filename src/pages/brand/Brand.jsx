@@ -8,7 +8,7 @@ const Brand = () => {
   const { brand } = useParams();
   useEffect(() => {
     fetch(
-      `https://technology-and-electronics-server-k2xg04seu.vercel.app/${brand}`
+      ` https://technology-and-electronics-server-pzmnao612.vercel.app/${brand}`
     )
       .then((res) => res.json())
       .then((data) => setBrandProduct(data));
@@ -20,13 +20,26 @@ const Brand = () => {
     <div>
       <Slider></Slider>
       <div className="grid grid-cols-2 px-24">
-        {brandProduct.map((productData) => (
+        {/* {brandProduct.map((productData) => (
           <ProductCard
             key={productData._id}
             productData={productData}
           ></ProductCard>
-        ))}
-        {/* <ProductCard></ProductCard> */}
+        ))} */}
+        {/* {brandProduct.length > 0 ? brandProduct.map((productData) => (
+          <ProductCard
+            key={productData._id}
+            productData={productData}
+          ></ProductCard>:'no'} */}
+        {brandProduct.length > 0 ? (
+          brandProduct.map((productData) => (
+            <ProductCard key={productData._id} productData={productData} />
+          ))
+        ) : (
+          <h2 className="text-4xl font-semibold text-center">
+            Very Soon We Add this brand Product
+          </h2>
+        )}
       </div>
     </div>
   );

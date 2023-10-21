@@ -1,16 +1,7 @@
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const BrandCard = ({ brandData }) => {
-  // useEffect(() => {
-  //   fetch(
-  //     `https://technology-and-electronics-server-5yeidzl2t.vercel.app/${brandName}`
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, [brandName]);
-
   const { brandName, imageUrl, _id } = brandData;
 
   return (
