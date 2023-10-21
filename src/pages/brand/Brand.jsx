@@ -19,7 +19,7 @@ const Brand = () => {
   return (
     <div>
       <Slider></Slider>
-      <div className="grid grid-cols-2 px-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-24">
         {/* {brandProduct.map((productData) => (
           <ProductCard
             key={productData._id}
