@@ -12,7 +12,7 @@ const DetilesCard = () => {
 
   useEffect(() => {
     fetch(
-      ` https://technology-and-electronics-server-ntgl4njvl.vercel.app/product/${_id}`
+      ` https://technology-and-electronics-server-164eke7af.vercel.app/product/${_id}`
     )
       .then((res) => res.json())
       .then((data) => setData(data));
@@ -21,7 +21,7 @@ const DetilesCard = () => {
   const handleAddToCart = () => {
     console.log(cart);
     fetch(
-      ` https://technology-and-electronics-server-ntgl4njvl.vercel.app/cart`,
+      ` https://technology-and-electronics-server-164eke7af.vercel.app/cart`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

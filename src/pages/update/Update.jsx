@@ -25,7 +25,7 @@ const Update = () => {
     };
     console.log("product", product);
     fetch(
-      ` https://technology-and-electronics-server-ntgl4njvl.vercel.app/update/${data._id}`,
+      ` https://technology-and-electronics-server-164eke7af.vercel.app/update/${data._id}`,
       {
         method: "PUT",
         headers: {
@@ -133,7 +133,7 @@ const Update = () => {
                     boxShadow:
                       "inset 2px 2px 9px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff",
                   }}
-                  type="text"
+                  type="number"
                   defaultValue={data.price}
                   name="price"
                   placeholder="Price"
@@ -167,7 +167,7 @@ const Update = () => {
                     boxShadow:
                       "inset 2px 2px 9px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff",
                   }}
-                  type="text"
+                  type="number"
                   defaultValue={data.rating}
                   name="rating"
                   placeholder="Rating"

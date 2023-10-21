@@ -5,7 +5,7 @@ const OurBrand = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(
-      " https://technology-and-electronics-server-ntgl4njvl.vercel.app/brands"
+      " https://technology-and-electronics-server-164eke7af.vercel.app/brands"
     )
       .then((res) => res.json())
       .then((data) => setData(data));

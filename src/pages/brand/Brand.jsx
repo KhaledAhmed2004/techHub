@@ -8,7 +8,7 @@ const Brand = () => {
   const { brand } = useParams();
   useEffect(() => {
     fetch(
-      ` https://technology-and-electronics-server-ntgl4njvl.vercel.app/${brand}`
+      ` https://technology-and-electronics-server-164eke7af.vercel.app/${brand}`
     )
       .then((res) => res.json())
       .then((data) => setBrandProduct(data));
