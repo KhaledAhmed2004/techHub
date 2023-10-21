@@ -37,9 +37,9 @@ const DetilesCard = () => {
       {data.map((item) => (
         <div
           key={item._id}
-          className="h-[60vh] relative mx-auto flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+          className="max-h-[80vh] relative mx-auto flex w-full max-w-[48rem] flex-col md:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
         >
-          <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
+          <div className="relative mx-auto w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
             <img src={item.image} className="object-cover w-full h-full" />
           </div>
           <div className="p-6">
